@@ -1,1 +1,61 @@
-.cmp-container {}
+// container decorator
+
+$container: '.cmp-container';
+
+#{$container} {
+  margin: 0;
+  padding: 0;
+
+  // Widths
+  &__default-width {
+    width: 100%;
+  }
+  &__contained-width {
+    max-width: 1200px;
+  }
+
+  // Horizontal padding
+
+  &__default-horizontal-padding {
+    padding: 64px 0 64px 0;
+  }
+  &__no-horizontal-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  // Vertical padding
+
+  &__default-vertical-padding {
+    padding: 0 24px 0 24px;
+  }
+  &__no-vertical-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__pink {
+    color: $color-darkgrey;
+    background-color: $color-pink;
+  }
+  &__transparent {
+    color: $color-darkgrey;
+    background-color: transparent;
+  }
+  &__blue {
+    color: $color-white;
+    background-color: $color-blue;
+  }
+  &__dark-grey {
+    color: $color-white;
+    background-color: $color-darkgrey;
+  }
+  &__white {
+    color: $color-darkgrey;
+    background-color: $color-white;
+  }
+  &__yellow {
+    color: $color-darkgrey;
+    background-color: $color-yellow;
+  }
+}
