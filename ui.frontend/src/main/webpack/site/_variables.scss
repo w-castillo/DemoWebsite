@@ -1,18 +1,31 @@
-
 //== Font
-
-$font-family:           "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size:             16px;
-$font-height:           1.5;
+$font-family: 'Courier New', monospace;
+$font-size: 16px;
+$font-height: 1.5;
 
 //== Color
 
 // Normal mode
-$color-foreground:      #202020;
-$color-background:      #ECECEC;
-$color-link:            #2020E0;
+$color-foreground: #202020;
+$color-background: #ececec;
+$color-link: #2020e0;
 
 // Dark mode
 $color-foreground-dark: invert($color-foreground);
 $color-background-dark: invert($color-background);
-$color-link-dark:       invert($color-link);
+$color-link-dark: invert($color-link);
+
+// My colors
+
+$color-yellow: #f7ff58;
+$color-pink: #cc59d2;
+$color-blue: #006cae;
+$color-darkgrey: #30343f;
+$color-white: #ffffff;
+
+// Breakpoints
+
+$screen-xs: 375px;
+$screen-sm: 550px;
+$screen-md: 768px;
+$screen-lg: 1024px;
