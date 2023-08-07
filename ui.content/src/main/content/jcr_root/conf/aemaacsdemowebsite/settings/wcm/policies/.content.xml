@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
     <rep:policy/>
@@ -34,9 +34,9 @@
                     jcr:title="Content Image"
                     sling:resourceType="wcm/core/components/policy/policy"
                     allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
-                    disableLazyLoading="false"
                     allowUpload="false"
                     altValueFromDAM="true"
+                    disableLazyLoading="false"
                     displayPopupTitle="true"
                     isDecorative="false"
                     jpegQuality="{Long}85"
@@ -177,6 +177,8 @@
                 </policy_641475696923109>
                 <policy_641528232375303
                     jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                    jcr:lastModified="{Date}2023-08-02T14:01:54.524-04:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Content Title"
                     sling:resourceType="wcm/core/components/policy/policy"
@@ -184,6 +186,20 @@
                     linkDisabled="false"
                     type="h2">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Text color"
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-title"
+                                    cq:styleId="1690999277735"
+                                    cq:styleLabel="Test color"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
                 </policy_641528232375303>
             </title>
             <experiencefragment jcr:primaryType="nt:unstructured">
@@ -236,11 +252,15 @@
                     </cq:authoring>
                 </policy_1574694950110>
                 <policy_1574695586800
+                    cq:styleDefaultClasses=".cmp-container"
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:lastModified="{Date}2023-08-01T20:43:30.271-04:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:AEMaaCS Demo Website - Content,/apps/aemaacsdemowebsite/components/form/container]">
+                    components="[group:AEMaaCS Demo Website - Content,/apps/aemaacsdemowebsite/components/form/container]"
+                    layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -264,6 +284,94 @@
                                 resourceType="aemaacsdemowebsite/components/contentfragment"/>
                         </assetToComponentMapping>
                     </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Background-color"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container__pink"
+                                    cq:styleId="1690862771409"
+                                    cq:styleLabel="Pink"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container__transparent"
+                                    cq:styleId="1690862830513"
+                                    cq:styleLabel="transparent"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-container__blue"
+                                    cq:styleId="1690862849816"
+                                    cq:styleLabel="blue"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-container__dark-grey"
+                                    cq:styleId="1690862866695"
+                                    cq:styleLabel="darkgrey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-container__white"
+                                    cq:styleId="1690862884538"
+                                    cq:styleLabel="white"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-container__yellow"
+                                    cq:styleId="1690862900738"
+                                    cq:styleLabel="yellow"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                        <item1
+                            cq:styleGroupLabel="Horizontal Padding"
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container__default-X-padding"
+                                    cq:styleId="1690862925574"
+                                    cq:styleLabel="default padding horizontal"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container__no-X-padding"
+                                    cq:styleId="1690863015947"
+                                    cq:styleLabel="No padding horizontal"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="Vertical Padding"
+                            cq:styleGroupMultiple="true"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container__default-Y-padding"
+                                    cq:styleId="1690864037971"
+                                    cq:styleLabel="default padding vertical"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container__no-Y-padding"
+                                    cq:styleId="1690864074194"
+                                    cq:styleLabel="No padding vertical"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Width"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-container__default"
+                                    cq:styleId="1690936806498"
+                                    cq:styleLabel="Full"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-container__contained"
+                                    cq:styleId="1690936770267"
+                                    cq:styleLabel="Contained"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item3>
+                    </cq:styleGroups>
                 </policy_1574695586800>
                 <policy_649128221558427
                     cq:styleDefaultElement="main"
@@ -331,10 +439,13 @@
             <page jcr:primaryType="nt:unstructured">
                 <policy
                     jcr:description="Includes the required client libraries."
+                    jcr:lastModified="{Date}2023-07-31T22:42:39.584-04:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
                     clientlibs="[aemaacsdemowebsite.dependencies,aemaacsdemowebsite.site]"
+                    clientlibsAsync="false"
                     clientlibsJsHead="aemaacsdemowebsite.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
