@@ -1,5 +1,5 @@
 //== Font
-$font-family: 'Courier New', monospace;
+$courier-new: 'Courier New', monospace;
 $font-size: 16px;
 $font-height: 1.5;
 
@@ -25,7 +25,51 @@ $color-white: #ffffff;
 
 // Breakpoints
 
-$screen-xs: 375px;
-$screen-sm: 550px;
-$screen-md: 768px;
-$screen-lg: 1024px;
+$breakpoint-xsmall: 320px;
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-extra-large: 1300px;
+
+@mixin breakpoint($breakpoint) {
+  @if ($breakpoint == xsmall) {
+    @media (max-width: $breakpoint-xsmall) {
+      @content;
+    }
+  } @else if ($breakpoint == small) {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if ($breakpoint == medium) {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if ($breakpoint == large) {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if ($breakpoint == xlarge) {
+    @media (max-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+}
+
+// Heading Levels for title
+// Desktop
+$headingDesktop1: 60px;
+$headingDesktop2: 48px;
+$headingDesktop3: 40px;
+$headingDesktop4: 32px;
+$headingDesktop5: 24px;
+$headingDesktop6: 18px;
+
+// Mobile
+$headingMobile1: 48px;
+$headingMobile2: 40px;
+$headingMobile3: 32px;
+$headingMobile4: 24px;
+$headingMobile5: 18px;
+$headingMobile6: 16px;

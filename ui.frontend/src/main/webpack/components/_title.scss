@@ -1,3 +1,82 @@
-.cmp-title {}
-.cmp-title__text {}
-.cmp-title__link {}
+@use '../site/variables' as breakpoint;
+// Title decorator
+$title: '.cmp-title';
+
+// title styles
+
+#{$title} {
+  // Heading - Desktop
+
+  &__heading-default {
+    font-size: $font-size;
+  }
+
+  &__heading-desktop-1 {
+    font-size: $headingDesktop1;
+
+    @include breakpoint(small) {
+      font-size: $headingMobile1;
+    }
+  }
+  &__heading-desktop-2 {
+    font-size: $headingDesktop2;
+
+    @include breakpoint(small) {
+      font-size: $headingMobile2;
+    }
+  }
+  &__heading-desktop-3 {
+    font-size: $headingDesktop3;
+
+    @include breakpoint(small) {
+      font-size: $headingMobile3;
+    }
+  }
+  &__heading-desktop-4 {
+    font-size: $headingDesktop4;
+
+    @include breakpoint(small) {
+      font-size: $headingMobile4;
+    }
+  }
+  &__heading-desktop-5 {
+    font-size: $headingDesktop5;
+
+    @include breakpoint(small) {
+      font-size: $headingMobile5;
+    }
+  }
+  &__heading-desktop-6 {
+    font-size: $headingDesktop6;
+
+    @include breakpoint(small) {
+      font-size: $headingMobile6;
+    }
+  }
+  // Position
+
+  &__text-position-default {
+    text-align: inherit;
+  }
+  &__text-left {
+    text-align: left;
+  }
+
+  &__text-center {
+    text-align: center;
+  }
+
+  &__text-right {
+    text-align: right;
+  }
+
+  &__link {
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: $color-blue;
+    border-radius: 10px;
+    padding: 10px;
+    color: $color-yellow;
+  }
+}
