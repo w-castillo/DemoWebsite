@@ -77,6 +77,9 @@
             </image>
             <text jcr:primaryType="nt:unstructured">
                 <policy_641562756958017
+                    cq:styleDefaultClasses=".cmp-button"
+                    jcr:lastModified="{Date}2023-08-11T11:26:06.467-04:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Content Text"
                     sling:resourceType="wcm/core/components/policy/policy">
@@ -104,7 +107,7 @@
                         </paraformat>
                         <misctools
                             jcr:primaryType="nt:unstructured"
-                            features="-">
+                            features="sourceedit">
                             <specialCharsConfig jcr:primaryType="nt:unstructured">
                                 <chars
                                     jcr:primaryType="nt:unstructured"
@@ -130,37 +133,37 @@
                         </misctools>
                         <edit
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="paste-plaintext,paste-wordhtml"/>
                         <findreplace
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <undo
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <spellcheck
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <image
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <table
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <lists
                             jcr:primaryType="nt:unstructured"
                             features="*"/>
                         <justify
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                         <format
                             jcr:primaryType="nt:unstructured"
-                            features="bold,italic"/>
+                            features="bold,italic,underline"/>
                         <links
                             jcr:primaryType="nt:unstructured"
-                            features="modifylink,unlink"/>
+                            features="modifylink,unlink,anchor"/>
                         <subsuperscript
                             jcr:primaryType="nt:unstructured"
-                            features="-"/>
+                            features="*"/>
                     </rtePlugins>
                 </policy_641562756958017>
             </text>
@@ -177,28 +180,83 @@
                 </policy_641475696923109>
                 <policy_641528232375303
                     jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
-                    jcr:lastModified="{Date}2023-08-02T14:01:54.524-04:00"
+                    jcr:lastModified="{Date}2023-08-07T16:27:46.605-04:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Content Title"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    allowedTypes="[h2,h3,h4,h5,h6]"
+                    allowedTypes="[h1,h2,h3,h4,h5,h6]"
                     linkDisabled="false"
-                    type="h2">
+                    type="h1">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:styleGroups jcr:primaryType="nt:unstructured">
                         <item0
-                            cq:styleGroupLabel="Text color"
-                            cq:styleGroupMultiple="true"
+                            cq:styleGroupLabel="Heading Level (Desktop - Mobile)"
                             jcr:primaryType="nt:unstructured">
                             <cq:styles jcr:primaryType="nt:unstructured">
                                 <item0
-                                    cq:styleClasses="cmp-title"
+                                    cq:styleClasses="cmp-title____heading-default "
+                                    cq:styleId="1691439989214"
+                                    cq:styleLabel="Heading default"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-title__heading-desktop-1"
                                     cq:styleId="1690999277735"
-                                    cq:styleLabel="Test color"
+                                    cq:styleLabel="H1 60px - 48px"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-title__heading-desktop-2"
+                                    cq:styleId="1691106458510"
+                                    cq:styleLabel="H2 48px - 40px"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-title__heading-desktop-3"
+                                    cq:styleId="1691106472020"
+                                    cq:styleLabel="H3 40px - 32px"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                    cq:styleClasses="cmp-title__heading-desktop-4"
+                                    cq:styleId="1691106475938"
+                                    cq:styleLabel="H4 32px - 24px"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                    cq:styleClasses="cmp-title__heading-desktop-5"
+                                    cq:styleId="1691106483023"
+                                    cq:styleLabel="H5 24px - 18px"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item6
+                                    cq:styleClasses="cmp-title__heading-desktop-6"
+                                    cq:styleId="1691106487311"
+                                    cq:styleLabel="H6 18px - 16px"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
+                        <item1
+                            cq:styleGroupLabel="Position"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="cmp-title__text-position-default"
+                                    cq:styleId="1691438052685"
+                                    cq:styleLabel="Default"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="cmp-title__text-left"
+                                    cq:styleId="1691108513139"
+                                    cq:styleLabel="Left"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="cmp-title__text-center"
+                                    cq:styleId="1691108542210"
+                                    cq:styleLabel="Center"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="cmp-title__text-right"
+                                    cq:styleId="1691108554854"
+                                    cq:styleLabel="Right"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
                     </cq:styleGroups>
                 </policy_641528232375303>
             </title>

@@ -1,5 +1,5 @@
 //== Font
-$courier-new: 'Courier New', monospace;
+$font-family: 'Courier New', monospace;
 $font-size: 16px;
 $font-height: 1.5;
 
@@ -15,7 +15,7 @@ $color-foreground-dark: invert($color-foreground);
 $color-background-dark: invert($color-background);
 $color-link-dark: invert($color-link);
 
-// My colors
+// My colors /////////////////////////////////////////////////
 
 $color-yellow: #f7ff58;
 $color-pink: #cc59d2;
@@ -23,7 +23,7 @@ $color-blue: #006cae;
 $color-darkgrey: #30343f;
 $color-white: #ffffff;
 
-// Breakpoints
+// Breakpoints /////////////////////////////////////////////////
 
 $breakpoint-xsmall: 320px;
 $breakpoint-small: 576px;
@@ -57,7 +57,7 @@ $breakpoint-extra-large: 1300px;
   }
 }
 
-// Heading Levels for title
+// Heading Levels for title ////////////////////////////////////
 // Desktop
 $headingDesktop1: 60px;
 $headingDesktop2: 48px;
@@ -73,3 +73,53 @@ $headingMobile3: 32px;
 $headingMobile4: 24px;
 $headingMobile5: 18px;
 $headingMobile6: 16px;
+
+// Button options //////////////////////////////////////////////
+
+$button-color-red: red; // Primary (Red Background)
+$button-color-outline-red: rgb(255, 204, 204); // Primary Outline (Red Border)
+$button-color-blue: blue; // Secondary (Blue Background)
+$button-color-outline-blue: rgb(181, 181, 255); // Secondary Outline (Blue Border)
+$button-color-tertiary: black; // Tertiary (White Border)
+$button-color-white: white;
+
+$button-width: fit-content;
+$button-height: 80px;
+$button-border-radius: 15px;
+$button-font-size: 20px;
+$button-font-weight: 600;
+$button-padding: 20px;
+$button-margin: 20px;
+
+@mixin buttonDefault {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+@mixin buttonStyles($bgColor, $borderColor) {
+  text-align: center;
+  display: flex;
+  font-weight: 600;
+  width: fit-content;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+  @if ($bgColor & $borderColor) {
+    background-color: $bgColor;
+    border: 2px solid $borderColor;
+  } @else {
+    @error "PLEASE PROVIDE ARGUMENTS FOR #{$bgColor} #{$borderColor}";
+  }
+}
+
+@mixin buttonStylesText($fontColor) {
+  font-size: $button-font-size;
+  color: $fontColor;
+}
