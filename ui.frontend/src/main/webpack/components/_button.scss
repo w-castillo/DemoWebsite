@@ -1,4 +1,48 @@
-.cmp-button {}
-.cmp-button__text {}
-.cmp-button__icon {}
+@use '../site/variables';
+
+// Button decorator
+$button: '.cmp-button';
+
+#{$button} {
+  @include buttonDefault;
+
+  &__bg-red {
+    @include variables.buttonStyles($button-color-red, $button-color-white);
+
+    #{$button}__text {
+      @include variables.buttonStylesText($button-color-white);
+    }
+  }
+  &__bg-outline-red {
+    @include variables.buttonStyles($button-color-outline-red, $button-color-red);
+
+    #{$button}__text {
+      @include variables.buttonStylesText($button-color-red);
+    }
+  }
+  &__bg-blue {
+    @include variables.buttonStyles($button-color-blue, $button-color-white);
+
+    #{$button}__text {
+      @include variables.buttonStylesText($button-color-white);
+    }
+  }
+  &__bg-outline-blue {
+    @include variables.buttonStyles($button-color-outline-blue, $button-color-blue);
+
+    #{$button}__text {
+      @include variables.buttonStylesText($button-color-blue);
+    }
+  }
+  &__bg-tertiary {
+    @include variables.buttonStyles($button-color-tertiary, $button-color-white);
+
+    #{$button}__text {
+      @include variables.buttonStylesText($button-color-white);
+    }
+  }
+}
+
+.cmp-button__icon {
+}
 //.cmp-button__icon--myIcon {}
