@@ -3,43 +3,119 @@
 // Button decorator
 $button: '.cmp-button';
 
-#{$button} {
-  @include buttonDefault;
+// Alignment
 
-  &__bg-red {
+#{$button}__justify-button-inherit {
+  display: flex;
+  justify-content: inherit;
+}
+#{$button}__justify-button-left {
+  display: flex;
+  justify-content: start;
+}
+#{$button}__justify-button-center {
+  display: flex;
+  justify-content: center;
+}
+#{$button}__justify-button-right {
+  display: flex;
+  justify-content: end;
+}
+
+// Button default styles
+#{$button}__text {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-weight: 600;
+  width: 150px;
+  height: 60px;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 10px 10px 10px black;
+  transition: 0.3s ease-in-out;
+}
+
+// button bg colors, text and hover effects
+#{$button}__bg-red {
+  #{$button}__text {
     @include variables.buttonStyles($button-color-red, $button-color-white);
+    @include variables.buttonStylesText($button-color-white);
 
-    #{$button}__text {
-      @include variables.buttonStylesText($button-color-white);
+    &:hover {
+      @include variables.hoverStyles($button-color-red, $button-color-white, $button-color-white);
     }
   }
-  &__bg-outline-red {
+  & > a {
+    text-decoration: none;
+  }
+}
+#{$button}__bg-outline-red {
+  #{$button}__text {
     @include variables.buttonStyles($button-color-outline-red, $button-color-red);
+    @include variables.buttonStylesText($button-color-red);
 
-    #{$button}__text {
-      @include variables.buttonStylesText($button-color-red);
+    &:hover {
+      @include variables.hoverStyles(
+        $button-color-outline-red,
+        $button-color-red,
+        $button-color-red
+      );
     }
   }
-  &__bg-blue {
+  & > a {
+    text-decoration: none;
+  }
+}
+#{$button}__bg-blue {
+  #{$button}__text {
     @include variables.buttonStyles($button-color-blue, $button-color-white);
+    @include variables.buttonStylesText($button-color-white);
 
-    #{$button}__text {
-      @include variables.buttonStylesText($button-color-white);
+    &:hover {
+      @include variables.hoverStyles($button-color-blue, $button-color-white, $button-color-white);
     }
   }
-  &__bg-outline-blue {
+  & > a {
+    text-decoration: none;
+  }
+}
+#{$button}__bg-outline-blue {
+  #{$button}__text {
     @include variables.buttonStyles($button-color-outline-blue, $button-color-blue);
+    @include variables.buttonStylesText($button-color-blue);
 
-    #{$button}__text {
-      @include variables.buttonStylesText($button-color-blue);
+    &:hover {
+      @include variables.hoverStyles(
+        $button-color-outline-blue,
+        $button-color-blue,
+        $button-color-blue
+      );
     }
   }
-  &__bg-tertiary {
+  & > a {
+    text-decoration: none;
+  }
+}
+#{$button}__bg-tertiary {
+  #{$button}__text {
     @include variables.buttonStyles($button-color-tertiary, $button-color-white);
+    @include variables.buttonStylesText($button-color-white);
 
-    #{$button}__text {
-      @include variables.buttonStylesText($button-color-white);
+    &:hover {
+      @include variables.hoverStyles(
+        $button-color-tertiary,
+        $button-color-white,
+        $button-color-white
+      );
     }
+  }
+  & > a {
+    text-decoration: none;
   }
 }
 
