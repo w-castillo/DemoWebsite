@@ -8,7 +8,7 @@ $container: '.cmp-container';
 
   // Width
   &__default {
-    width: 100%;
+    width: 100vw;
   }
   &__contained {
     max-width: 1200px;
@@ -58,5 +58,27 @@ $container: '.cmp-container';
   &__yellow {
     color: $color-darkgrey;
     background-color: $color-yellow;
+  }
+}
+// Content Alignment
+
+#{$container} {
+  &__justify-left {
+    #{$container} > div {
+      display: flex;
+      justify-content: start;
+    }
+  }
+  &__justify-center {
+    #{$container} > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__justify-right {
+    #{$container} > div {
+      display: flex;
+      justify-content: end;
+    }
   }
 }
