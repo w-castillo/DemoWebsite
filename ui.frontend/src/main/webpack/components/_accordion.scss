@@ -1,10 +1,49 @@
-.cmp-accordion {}
-.cmp-accordion__item {}
-.cmp-accordion__header {}
-.cmp-accordion__button {}
-.cmp-accordion__button--expanded {}
-.cmp-accordion__title {}
-.cmp-accordion__icon {}
-.cmp-accordion__panel {}
-.cmp-accordion__panel--expanded {}
-.cmp-accordion__panel--hidden {}
+.cmp-accordion {
+  transition: 0.5s;
+}
+.cmp-accordion__item {
+  margin-bottom: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.cmp-accordion__header {
+}
+.cmp-accordion__button {
+  background-color: yellow;
+  border: none;
+  border-radius: 5px;
+  padding-inline: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cmp-accordion__button--expanded {
+  background-color: yellow;
+  border: none;
+  border-radius: 5px;
+
+  .cmp-accordion__icon {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+}
+.cmp-accordion__title {
+}
+.cmp-accordion__icon {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: 0.5s;
+}
+.cmp-accordion__panel {
+  background-color: yellow;
+  padding-inline: 15px;
+  transition: 0.5s;
+}
+.cmp-accordion__panel--expanded {
+}
+.cmp-accordion__panel--hidden {
+}
