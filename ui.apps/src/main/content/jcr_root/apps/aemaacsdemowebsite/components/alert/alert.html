@@ -1,0 +1,10 @@
+<div
+  data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.alert="com.aem.aemaacs.demowebsite.core.models.Alert"
+  class="cmp-alert"
+>
+  <div class="cmp-alert__wrapper">
+    <p class="cmp-alert__message">${alert.message @ context= 'html'}</p>
+  </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=alert.empty}"></sly>
