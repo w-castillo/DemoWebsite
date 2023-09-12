@@ -1,4 +1,11 @@
-.cmp-image {}
-.cmp-image__link {}
-.cmp-image__image {}
-.cmp-image__title {}
+.cmp-image {
+}
+.cmp-image__link {
+}
+.cmp-image__image {
+  width: 100%;
+  height: auto;
+  content-visibility: auto;
+}
+.cmp-image__title {
+}
