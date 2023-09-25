@@ -1,0 +1,47 @@
+@use '../site/variables';
+
+$social: '.cmp-social';
+$social-bgColor-red: red;
+$social-bgColor-pink: $color-pink;
+$social-bgColor-blue: $color-blue;
+$social-bgColor-darkgrey: $color-darkgrey;
+$social-bgColor-black: black;
+
+#{$social} {
+  &__bg-red {
+    background-color: $social-bgColor-red;
+  }
+  &__bg-pink {
+    background-color: $social-bgColor-pink;
+  }
+  &__bg-blue {
+    background-color: $social-bgColor-blue;
+  }
+  &__bg-dark-grey {
+    background-color: $social-bgColor-darkgrey;
+  }
+  &__bg-black {
+    background-color: $social-bgColor-black;
+  }
+}
+
+.cmp-social > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cmp-social__item {
+  list-style: none;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.cmp-social__icon {
+  width: 100px;
+  fill: white;
+  display: flex;
+  padding: 10px;
+}
