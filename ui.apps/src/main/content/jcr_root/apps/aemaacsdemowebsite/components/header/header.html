@@ -1,0 +1,93 @@
+<header
+  data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+  class="cmp-header"
+>
+  <div class="cmp-header__wrapper">
+    <!--/* render child elements here */-->
+    <!--/* logo */-->
+    <section class="cmp-header__first-section">
+      <div
+        class="cmp-header__logo"
+        data-sly-resource="${'logo'  @ resourceType='aemaacsdemowebsite/components/image'}"
+      ></div>
+      <div class="cmp-header__separator"></div>
+      <!--/* links */-->
+      <div
+        class="cmp-header__links"
+        data-sly-resource="${'links'  @ resourceType='aemaacsdemowebsite/components/navigation'}"
+      ></div>
+    </section>
+
+    <!--/* language - search - button */-->
+    <section class="cmp-header__second-section">
+      <div
+        class="cmp-header__language"
+        data-sly-resource="${'language'  @ resourceType='aemaacsdemowebsite/components/languagenavigation'}"
+      ></div>
+      <div
+        class="cmp-header__search"
+        data-sly-resource="${'search'  @ resourceType='aemaacsdemowebsite/components/search'}"
+      ></div>
+      <div
+        class="cmp-header__button"
+        data-sly-resource="${'button'  @ resourceType='aemaacsdemowebsite/components/button'}"
+      ></div>
+      <div class="cmp-header__hamburger" onClick="handleBurger()" id="burger">
+        <div class="cmp-header__hamburger-line1"></div>
+        <div class="cmp-header__hamburger-line2"></div>
+        <div class="cmp-header__hamburger-line3"></div>
+      </div>
+    </section>
+  </div>
+</header>
+<section class="cmp-header__mobile-section" id="mobile">
+  <div
+    class="cmp-header__mobile-section-links"
+    data-sly-resource="${'links'  @ resourceType='aemaacsdemowebsite/components/navigation'}"
+  ></div>
+  <div
+    class="cmp-header__mobile-section-language"
+    data-sly-resource="${'language'  @ resourceType='aemaacsdemowebsite/components/languagenavigation'}"
+  ></div>
+  <div
+    class="cmp-header__mobile-section-search"
+    data-sly-resource="${'search'  @ resourceType='aemaacsdemowebsite/components/search'}"
+  ></div>
+  <div
+    class="cmp-header__mobile-section-button"
+    data-sly-resource="${'button'  @ resourceType='aemaacsdemowebsite/components/button'}"
+  ></div>
+</section>
+
+<script>
+  function handleBurger() {
+    const mobileDiv = document.querySelector('#mobile');
+    const burgerDiv = document.getElementById('burger');
+    burgerDiv.classList.toggle('change');
+    if (burgerDiv.classList.contains('change')) {
+      mobileDiv.style.display = 'block';
+      mobileDiv.style.opacity = '1';
+    } else {
+      mobileDiv.style.display = 'none';
+      mobileDiv.style.opacity = '0';
+    }
+
+    window.onresize = function () {
+      const burgerDiv = document.getElementById('burger');
+      const mobileDiv = document.querySelector('#mobile');
+
+      console.log('resize');
+
+      if (window.matchMedia('screen and (max-width: 768px)').matches) {
+        console.log('visible');
+      } else {
+        console.log('NOT visible');
+        burgerDiv.classList.remove('change');
+        mobileDiv.style.opacity = '0';
+        mobileDiv.style.display = 'none';
+        
+      }
+    };
+  }
+</script>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
